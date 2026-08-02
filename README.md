@@ -1,6 +1,6 @@
-# Smart Macro Automation Studio
+# Smart Macro Studio
 
-Smart Macro Automation Studio is a Java and JavaFX desktop application that helps users automate repeated computer tasks.
+Smart Macro Studio is a Java and JavaFX desktop application that helps users automate repeated computer tasks.
 
 The application can record mouse movements, mouse clicks, keyboard actions, and the time between actions. Recorded actions can then be edited, saved, scheduled, and played back automatically.
 
@@ -137,7 +137,7 @@ Multiple macros can be placed into a Queue and executed one after another.
 ## Project Structure
 
 ```text
-Smart-Macro-Automation-Studio/
+Smart-Macro-Studio/
 │
 ├── src/
 │   └── ...
