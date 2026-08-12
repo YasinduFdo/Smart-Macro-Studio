@@ -2,17 +2,17 @@ package com.smartmacro.datastructure;
 
 public class MacroQueue {
     
-    // Core queue variables mapped directly to your lecture notes
+    
     int max_size;
     int front;
     int rear;
     
-    // Parallel arrays to hold the queued data
+    
     String[] macroNames;
     ActionLinkedList[] macroLists;
 
     public MacroQueue() {
-        this.max_size = 100; // Defining a maximum queue size
+        this.max_size = 100; 
         this.front = 0;
         this.rear = -1;
         
@@ -20,7 +20,7 @@ public class MacroQueue {
         this.macroLists = new ActionLinkedList[max_size];
     }
 
-    // Matches the 'enque' logic: checks if full, increments rear, inserts data
+    
     public void enqueue(String name, ActionLinkedList list) {
         if (rear == max_size - 1) {
             System.out.println("Full");
@@ -31,7 +31,7 @@ public class MacroQueue {
         }
     }
 
-    // Matches the 'deque' logic: checks if empty, retrieves data at front, increments front
+    
     public ActionLinkedList dequeue() {
         if (front > rear) {
             System.out.println("Empty");
@@ -43,7 +43,7 @@ public class MacroQueue {
         }
     }
 
-    // Helper method used by App.java to know when the queue is finished executing
+    
     public boolean isEmpty() {
         return front > rear;
     }
