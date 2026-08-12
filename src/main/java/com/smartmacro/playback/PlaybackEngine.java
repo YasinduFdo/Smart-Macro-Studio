@@ -10,12 +10,7 @@ import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-/**
- * Traverses the ActionLinkedList (forward, head to tail) and physically
- * reproduces each enabled action using java.awt.Robot: real mouse moves,
- * real clicks, real key presses. Delays between actions are respected and
- * scaled by the chosen playback speed.
- */
+
 public class PlaybackEngine {
 
     public enum State { PLAYING, PAUSED, STOPPED, FINISHED }
@@ -56,11 +51,11 @@ public class PlaybackEngine {
         state.set(State.PLAYING);
         long start = System.currentTimeMillis();
 
-        // Use the new academic Linked List traversal method!
+        
         List<AutomationAction> actionsToPlay = list.forwardTraversal();
         
         for (AutomationAction current : actionsToPlay) {
-            // Handle pause / stop between every single action.
+           
             while (state.get() == State.PAUSED) {
                 sleepQuiet(50);
             }
@@ -136,7 +131,7 @@ public class PlaybackEngine {
                 else System.out.println("  [dry-run] type: " + resolvedText);
                 break;
             case DELAY:
-                // delay already applied above via scaledDelay
+                
                 break;
         }
     }
